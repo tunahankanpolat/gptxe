@@ -8,3 +8,20 @@
         return true;
     }
 });*/
+
+chrome.runtime.onMessage.addListener((msg, sender, response) => {
+    if(msg.type === "popup"){
+
+        getContainer().then((container) => {
+            response(container);
+            console.log(container);
+          });
+          return true;
+    }
+  });
+
+
+  async function getContainer(){
+    const conteiner = await document.getElementsByClassName("container-fluid");
+    return conteiner;
+  }

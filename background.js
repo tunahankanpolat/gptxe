@@ -1,16 +1,14 @@
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
-  console.log("onMessage run");
   if(msg.type === "connectAPI"){
     connectAPI(msg).then((data) => {
       response(data);
-      console.log(data);
     });
     return true;
   }
 });
 
 async function connectAPI(msg){
-  const response = await fetch("http://localhost:3000/api/generate", {
+  const response = await fetch("http://localhost:3001/api/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

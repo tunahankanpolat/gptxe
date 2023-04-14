@@ -14,14 +14,16 @@
     },
     "content_scripts": [
         {
-          "js": ["scripts/content.js"],
+          "js": ["scripts/content.js","components/menu/menu.js", "components/iconButton/iconButton.js", "components/bubble/bubble.js"],
+          "css": ["components/iconButton/iconButton.css", "components/bubble/bubble.css","components/menu/menu.css"],
           "matches": ["<all_urls>"]
 
         }
     ],
     "web_accessible_resources": [{
         "resources": [
-            "api/generate.js"
+            "popup/popup.js",
+            "popup/popup.html"
         ],
         "matches": [
             "<all_urls>"
@@ -38,7 +40,8 @@
     },
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "windows"
     ]
 
 }
