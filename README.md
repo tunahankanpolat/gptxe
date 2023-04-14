@@ -1,5 +1,6 @@
+<a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
-<details #readme-top>
+<details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
