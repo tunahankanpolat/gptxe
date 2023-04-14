@@ -1,5 +1,5 @@
 <!-- TABLE OF CONTENTS -->
-<details>
+<details #readme-top>
   <summary>Table of Contents</summary>
   <ol>
     <li>
