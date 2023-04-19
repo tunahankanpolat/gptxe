@@ -2,7 +2,6 @@ import { Configuration, OpenAIApi } from "openai";
 import promt from "./promt";
 
 const configuration = new Configuration({
-  organization: "org-YGShrxBZS7XRpINwrIpSDye1",
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);

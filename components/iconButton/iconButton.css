@@ -1,0 +1,26 @@
+#gptxe-icon-button {
+    background-color: rgb(245, 245, 245);
+    box-sizing: content-box;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    z-index: 2147483647;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 220, 220);
+    border-image: initial;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+#gptxe-icon {
+    background-image: url("https://i.imgur.com/tvFceiL.png");
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    margin: 0em;
+    padding: 1px;
+    border-style:none;
+}
