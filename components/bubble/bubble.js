@@ -1,12 +1,12 @@
 function createBubble(mouseX, mouseY, text) {
     const bubble = document.createElement('div');
-    bubble.setAttribute('id', getBubbleID());
+    bubble.setAttribute('id', BUBBLE_ID);
     bubble.style.position = 'absolute';
     bubble.style.left = `${mouseX}px`;
     bubble.style.top = `${mouseY}px`;  
   
     const content = document.createElement('div');
-    content.setAttribute("id", getBubbleContentID());
+    content.setAttribute("id", BUBBLE_CONTENT_ID);
     content.innerHTML = `<div class="load"></div>`;
 
     bubble.appendChild(content);
@@ -36,21 +36,13 @@ function createBubble(mouseX, mouseY, text) {
   }
   
   function getBubble(){
-      return document.getElementById(getBubbleID());
+      return document.getElementById(BUBBLE_ID);
   }
 
   function getBubbleContent(){
-    return document.getElementById(getBubbleContentID());
+    return document.getElementById(BUBBLE_CONTENT_ID);
   }
   
   function isBubbleAdded(){
-      return document.getElementById(getBubbleID()) != null ? true : false;
-  }
-  
-  function getBubbleID(){
-      return "gptxe-bubble";
-  }
-  
-  function getBubbleContentID(){
-      return "gptxe-content";
+      return document.getElementById(BUBBLE_ID) != null ? true : false;
   }

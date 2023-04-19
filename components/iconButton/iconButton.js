@@ -1,13 +1,13 @@
 function createIconButton(mouseX, mouseY) {
   const iconButton = document.createElement('div');
-  iconButton.setAttribute('id', getIconButtonID());
+  iconButton.setAttribute('id', ICON_BUTTON_ID);
   iconButton.style.position = 'absolute';
   iconButton.style.left = `${mouseX}px`;
   iconButton.style.top = `${mouseY}px`;  
 
   const icon = document.createElement('button');
-  icon.setAttribute("id", getIconID());
-  icon.classList.add(getIconID());
+  icon.setAttribute("id", ICON_ID);
+  icon.classList.add(ICON_ID);
   iconButton.appendChild(icon);
 
   return iconButton;
@@ -31,17 +31,9 @@ function removeIconButton(){
 }
 
 function getIconButton(){
-    return document.getElementById(getIconButtonID());
+    return document.getElementById(ICON_BUTTON_ID);
 }
 
 function isIconButtonAdded(){
-    return document.getElementById(getIconButtonID()) != null ? true : false;
-}
-
-function getIconButtonID(){
-    return "gptxe";
-}
-
-function getIconID(){
-    return "gptxe-icon";
+    return document.getElementById(ICON_BUTTON_ID) != null ? true : false;
 }

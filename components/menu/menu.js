@@ -1,10 +1,3 @@
-const menuOptions = [
-  { label: 'Summarize Content', id: 'summarizeContent' },
-  { label: 'Fix Typos', id: 'fixTypos' },
-  { label: 'Explain Code', id: 'explainCode' },
-  { label: 'Check Information', id: 'checkInformation' },
-];
-
 function addMenu(mouseX, mouseY, func){
   if(!isMenuAdded()){
     const menu = createMenu(mouseX, mouseY, func);
@@ -25,16 +18,16 @@ function isMenuAdded(){
 }
 
 function getMenu(){
-  return document.getElementById(getMenuID());
+  return document.getElementById(MENU_ID);
 }
 
 function createMenu(mouseX, mouseY, func){
   const menu = document.createElement('div');
 
-  menu.setAttribute("id", getMenuID());
+  menu.setAttribute("id", MENU_ID);
 
-  for(let i = 0; i < menuOptions.length; i++) {
-    createButton(menu, menuOptions[i], func);
+  for(let i = 0; i < MENU_OPTIONS.length; i++) {
+    createButton(menu, MENU_OPTIONS[i], func);
   }
 
   menu.style.position = "absolute";
@@ -45,7 +38,7 @@ function createMenu(mouseX, mouseY, func){
 
 function createButton(menu, option, func){
   const newRow = document.createElement('div');
-  newRow.classList.add(getRowClass());
+  newRow.classList.add(MENU_ROW_CLASS);
   newRow.innerHTML = getButton(option);
   menu.appendChild(newRow);
 
@@ -59,16 +52,8 @@ function createButtonListener(menu, option, func){
   });
 }
 
-function getMenuID(){
-  return "gptxe-menu";
-}
-
-function getRowClass(){
-  return "gptxe-menu-row";
-}
-
 function getButton(option){
   return `
-    <button id="${option.id}" class="gptxe-btn">${option.label}</button>
+    <button id="${option.id}" class="${MENU_BUTTON_CLASS}">${option.label}</button>
   `;
 }

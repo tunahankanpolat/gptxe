@@ -1,5 +1,5 @@
 document.addEventListener("mousedown", (event) => {
-  if(event.target.id != getIconID()){
+  if(event.target.id != ICON_ID){
     removeIconButton();
   }
 });
@@ -22,11 +22,11 @@ document.addEventListener("mouseup", (event) => {
 
 function addListener(node, mouseX, mouseY){
   node.addEventListener('click', () => {
-    if(node.id == getIconButtonID()){
+    if(node.id == ICON_BUTTON_ID){
       const menu = addMenu(mouseX, mouseY, sendMessage);
       addListener(menu, mouseX, mouseY);
       removeIconButton();
-    }else if(node.id == getMenuID()){
+    }else if(node.id == MENU_ID){
       const bubble = addBubble(mouseX, mouseY);
       addListener(bubble, mouseX, mouseY);
       removeMenu();
