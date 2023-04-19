@@ -1,3 +1,11 @@
+# GPTXE
+A tool to enrich online information.
+
+
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -22,7 +30,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -136,3 +143,8 @@ The background script connects to a local API that uses OpenAI's GPT-3.5 model t
 <!-- MARKDOWN LINKS & IMAGES -->
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/tunahankanpolat/gptxe/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/tunahankanpolat
