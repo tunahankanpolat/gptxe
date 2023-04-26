@@ -20,6 +20,7 @@
           "matches": ["<all_urls>"]
         }
     ],
+    "options_page": "components/settings/settings.html",
     "action": {
       "default_popup": "components/popup/login/login.html",
       "icons": {
