@@ -5,16 +5,28 @@
     <link rel="stylesheet" type="text/css" href="login.css">
   </head>
   <body>
-    <h1>Login/Signup</h1>
-    <form onsubmit="handleLoginFormSubmit(event)">
-      <label for="email">E-mail Address:</label>
-      <input type="email" id="email" name="email">
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password"><br>
-      <button type="submit">Login/Signup</button>
-    </form>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Log In & Signup</h2>
+    
+        <!-- Login Form -->
+        <form>
+          <input type="email" id="login" class="fadeIn second" name="login" placeholder="Email">
+          <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+          <input style="cursor: pointer;" type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+    
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+    
+      </div>
+    </div>
 
     <script src="login.js"></script>
 
   </body>
 </html>
+

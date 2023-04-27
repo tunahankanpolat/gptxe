@@ -6,19 +6,29 @@
     <link rel="stylesheet" type="text/css" href="dashboard.css">
   </head>
   <body>
-    <div>
-      <h1>GPTXE       <img src="../../../images/32.png" alt="icon" align="right"></h1>
-      <a href="#" id="options-link">All Settings</a>
 
-    </div>
-    <div class="settings">
-      <h2>Quick Setting </h2>
-      <form>
-        <label for="api-key">API Key:</label>
-        <input type="text" id="api-key" name="api-key">
-        <button type="submit">Apply</button>
-      </form>
-    </div>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2>GPTXE</h2>
+
+      
+          <h2 class="active"> Quick Settings</h2>
+      
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="api-key" class="fadeIn second" name="login" placeholder="Enter API Key">
+            <input style="cursor: pointer;" type="submit" class="fadeIn fourth" value="Apply">
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" id="all-settings" href="#">All Settings</a>
+          </div>
+        </div>
+      </div>
+
+
     <script src="dashboard.js"></script>
   </body>
 </html>
