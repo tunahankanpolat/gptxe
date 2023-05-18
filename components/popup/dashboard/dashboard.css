@@ -143,7 +143,21 @@ input[type=text]:placeholder {
   color: #cccccc;
 }
 
+.form-error-container {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+.error-message {
+  color: #4C75A3;
+  font-size: 14px;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+}
 
 /* ANIMATIONS */
 

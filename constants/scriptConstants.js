@@ -6,11 +6,11 @@ const MENU_ID="gptxe-menu"
 const MENU_ROW_CLASS="gptxe-menu-row"
 const MENU_BUTTON_CLASS="gptxe-btn"
 
-
-
 const MENU_OPTIONS = [
     { label: 'Summarize Content', id: 'summarizeContent' },
     { label: 'Fix Typos', id: 'fixTypos' },
     { label: 'Explain Code', id: 'explainCode' },
     { label: 'Check Information', id: 'checkInformation' },
   ];
+
+const BACKEND_URL = "http://localhost:5000"

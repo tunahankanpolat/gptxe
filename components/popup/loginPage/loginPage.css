@@ -62,17 +62,34 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
+.form-error-container {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+}
 
 
 /* TABS */
 
 h2.inactive {
   color: #cccccc;
+  cursor: pointer;
 }
 
 h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #5fbae9;
+  cursor: pointer;
 }
 
 

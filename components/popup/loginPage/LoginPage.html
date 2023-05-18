@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login/Signup</title>
+    <link rel="stylesheet" type="text/css" href="loginPage.css">
+  </head>
+  <body>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 id="loginTab" class="active"> Log In</h2>
+        <h2 id="signupTab" class="inactive underlineHover"> Signup</h2>
+
+    
+        <!-- Login Form -->
+        <form id="loginForm">
+          <input type="email" id="login" class="fadeIn second" name="login" placeholder="Email" required>
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+
+          <input style="cursor: pointer;" type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+        <div class="form-error-container">
+          <div id="errorContainer"></div> <!-- Hata mesajının gösterileceği yer -->
+        </div>
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+    
+      </div>
+    </div>
+
+    <script src="loginPage.js" type="module"></script>
+
+  </body>
+</html>
+
