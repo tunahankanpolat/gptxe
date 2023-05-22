@@ -13,6 +13,8 @@ chrome.storage.local.get(["token"], (result) => {
   const token = result["token"];
   if(token){
     chrome.action.setPopup({ popup: "components/popup/dashboard/dashboard.html" });
+  }else{
+    chrome.action.setPopup({ popup: "components/popup/loginPage/loginPage.html" });
   }
 });
 
