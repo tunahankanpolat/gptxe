@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="settings.css">
+</head>
+<body>
+  <div class='container'>
+    <div class='sidebar'>
+      <div class='sidebar__menu-item'></div>
+      <div id="account-settings-menu" class='sidebar__menu-item'>
+        <i class='fa fa-cog'></i>
+        Account Settings
+      </div>
+      <div id="customize-menu" class='sidebar__menu-item'>
+        <i class='fa fa-language'></i>
+        Customize
+      </div>
+      <div id="subscription-menu" class='sidebar__menu-item'>
+        <i class='fa fa-usd'></i>
+        Subscription
+      </div>
+      <div id="log-out-menu" class='sidebar__menu-item'>
+        <i class='fa fa-sign-out'></i>
+        Log Out
+      </div>
+    </div>
+    <div class='main'>
+      <div id="account-settings-section" class='main__header'>
+        <h2>Account Settings</h2>
+        <div class='main__content'>
+          <div class='main__settings-form'>
+            <form id="account-settings-form">
+              <label class='main__input-label'>Email:</label>
+              <input id="email" class='main__input' type='email' placeholder='Enter your email' required>
+              <label class='main__input-label'>Password:</label>
+              <input id="password" class='main__input' type='password' placeholder='Enter your password' required>
+              <input class='btn main__save-button' type="submit" value="Update"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="customize-section" class='main__header' style="display: none;">
+        <h2>Customize</h2>
+        <div class='main__content'>
+          <div class='main__settings-form'>
+            <form id="customize-form">
+              <label class='main__input-label'>Language Settings:</label>
+              <div class='language-dropdown main__input'>
+                <select id="language-preference" data-placeholder="Choose a Language...">
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Albanian">Albanian</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Armenian">Armenian</option>
+                    <option value="Basque">Basque</option>
+                    <option value="Bengali">Bengali</option>
+                    <option value="Bulgarian">Bulgarian</option>
+                    <option value="Catalan">Catalan</option>
+                    <option value="Cambodian">Cambodian</option>
+                    <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                    <option value="Croatian">Croatian</option>
+                    <option value="Czech">Czech</option>
+                    <option value="Danish">Danish</option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="English">English</option>
+                    <option value="Estonian">Estonian</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finnish">Finnish</option>
+                    <option value="French">French</option>
+                    <option value="Georgian">Georgian</option>
+                    <option value="German">German</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Gujarati">Gujarati</option>
+                    <option value="Hebrew">Hebrew</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Hungarian">Hungarian</option>
+                    <option value="Icelandic">Icelandic</option>
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Irish">Irish</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Javanese">Javanese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Latin">Latin</option>
+                    <option value="Latvian">Latvian</option>
+                    <option value="Lithuanian">Lithuanian</option>
+                    <option value="Macedonian">Macedonian</option>
+                    <option value="Malay">Malay</option>
+                    <option value="Malayalam">Malayalam</option>
+                    <option value="Maltese">Maltese</option>
+                    <option value="Maori">Maori</option>
+                    <option value="Marathi">Marathi</option>
+                    <option value="Mongolian">Mongolian</option>
+                    <option value="Nepali">Nepali</option>
+                    <option value="Norwegian">Norwegian</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Polish">Polish</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Punjabi">Punjabi</option>
+                    <option value="Quechua">Quechua</option>
+                    <option value="Romanian">Romanian</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Samoan">Samoan</option>
+                    <option value="Serbian">Serbian</option>
+                    <option value="Slovak">Slovak</option>
+                    <option value="Slovenian">Slovenian</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Swahili">Swahili</option>
+                    <option value="Swedish ">Swedish </option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Tatar">Tatar</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Tibetan">Tibetan</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Ukrainian">Ukrainian</option>
+                    <option value="Urdu">Urdu</option>
+                    <option value="Uzbek">Uzbek</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Welsh">Welsh</option>
+                    <option value="Xhosa">Xhosa</option>
+                  </select>
+              </div>
+              <input class='btn main__save-button' type="submit" value="Update"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="subscription-section" class='main__header' style="display: none;">
+        <h2>Subscription</h2>
+        <div class='main__content'>
+            <div class="subscription">
+                <div class="card">
+                  <h3>Free</h3>
+                  <ul>
+                    <li>You need API key</li>
+                    <li>Max token: 1024</li>
+                  </ul>
+                </div>
+              
+                <div class="card">
+                  <h3>Premium</h3>
+                  <ul>
+                    <li>You don't need API key</li>
+                    <li>Max token: 4096</li>
+                  </ul>
+                  <button class="purchase-button">$0.99 - Get Premium</button>
+                </div>
+              </div>
+              
+        </div>
+      </div>
+      <div id="log-out-section" class='main__header' style="display: none;">
+        <h2>Log Out</h2>
+        <div class='main__content'>
+          <p>Are you sure you want to log out?</p>
+          <button class='btn main__logout-button'>Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message">
+  </div>
+  <script src="settings.js" type="module"></script>
+</body>
+</html>

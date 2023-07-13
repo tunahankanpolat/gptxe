@@ -36,10 +36,23 @@ function addListener(node, mouseX, mouseY){
   });  
 }
 
-
-function sendMessage(choice){
-  const content = window.getSelection().toString();
-  chrome.runtime.sendMessage({ type: "connectAPI",selectedText: content, operationChoice: choice },(response) =>{
-    setBubbleContentText(response.result);
-});
+function sendMessage(choice) {
+  chrome.storage.local.get(["token"], (result) => {
+    const token = result["token"];
+    const content = window.getSelection().toString();
+    
+    chrome.runtime.sendMessage({
+      type: "connectAPI",
+      method: "POST",
+      url: BACKEND_URL + "/api/" + choice,
+      body: { "content": content },
+      "token": token
+    }, (response) => {
+      if (response.status === 200) {
+        setBubbleContentText(response.body.result);
+      } else {
+        setBubbleContentText(response.body.error);
+      }
+    });
+  });
 }

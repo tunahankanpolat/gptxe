@@ -1,0 +1,8 @@
+export const BACKEND_URL = "http://18.198.41.87:5000"
+export const LOGIN_ENDPOINT = "/api/logIn"
+export const SIGNUP_ENDPOINT = "/api/signUp"
+export const UPDATE_API_KEY_ENDPOINT = "/api/user/apiKey"
+export const UPDATE_EMAIL_ENDPOINT = "/api/user/email"
+export const UPDATE_PASSWORD_ENDPOINT = "/api/user/password"
+export const UPDATE_LANGUAGE_PREFERENCE_ENDPOINT = "/api/user/languagePreference"
+export const UPDATE_SUBSCRIPTION_ENDPOINT = "/api/user/subscription"

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPTXE</title>
+    <link rel="icon" href="../../../images/128.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+  </head>
+  <body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2>GPTXE</h2>
+
+      
+          <h2 class="active"> Quick Settings</h2>
+      
+          <!-- Login Form -->
+          <form id="dashboard-form">
+            <input type="text" id="api-key" class="fadeIn second" name="login" placeholder="Enter API Key" required>
+            <input style="cursor: pointer;" type="submit" class="fadeIn fourth" value="Apply">
+          </form>
+      
+          <div class="form-error-container">
+            <div id="errorContainer"></div> <!-- Hata mesajının gösterileceği yer -->
+          </div>
+
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" id="all-settings" href="#">All Settings</a>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="dashboard.js" type="module"></script>
+  </body>
+</html>
