@@ -43,6 +43,7 @@ function sendMessage(choice) {
     
     chrome.runtime.sendMessage({
       type: "connectAPI",
+      method: "POST",
       url: BACKEND_URL + "/api/" + choice,
       body: { "content": content },
       "token": token

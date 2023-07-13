@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   if (msg.type === "connectAPI") {
-    connectAPI(msg.url, msg.body, msg.token).then((result) => {
+    connectAPI(msg.method, msg.url, msg.body, msg.token).then((result) => {
       response(result)
     }).catch((error) => {
       response(error)
@@ -18,7 +18,7 @@ chrome.storage.local.get(["token"], (result) => {
   }
 });
 
-async function connectAPI(url, body, token) {
+async function connectAPI(method, url, body, token) {
   debugger
   const headers = {
     'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ async function connectAPI(url, body, token) {
   }
 
   const response = await fetch(url, {
-    method: 'POST',
+    method: method,
     headers,
     body: JSON.stringify(body)
   });

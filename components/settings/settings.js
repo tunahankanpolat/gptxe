@@ -32,9 +32,9 @@ document.getElementById("account-settings-menu").addEventListener("click", funct
     const password = document.getElementById('password').value;
     chrome.storage.local.get(["token"], (result) => {
         const token = result["token"];
-        chrome.runtime.sendMessage({type: "connectAPI", url: BACKEND_URL + UPDATE_PASSWORD_ENDPOINT, body: {password: password}, token:token}, (res) => {
+        chrome.runtime.sendMessage({type: "connectAPI", method:"PUT", url: BACKEND_URL + UPDATE_PASSWORD_ENDPOINT, body: {password: password}, token:token}, (res) => {
             if(res.status === 200){
-              chrome.runtime.sendMessage({type: "connectAPI", url: BACKEND_URL + UPDATE_EMAIL_ENDPOINT, body: {email: email}, token:token}, (res) => {
+              chrome.runtime.sendMessage({type: "connectAPI", method:"PUT", url: BACKEND_URL + UPDATE_EMAIL_ENDPOINT, body: {email: email}, token:token}, (res) => {
                   if(res.status === 200){
                     const token = res.body.access_token;
                     chrome.storage.local.set({ "token": token }).then(() => {
@@ -58,7 +58,7 @@ document.getElementById("account-settings-menu").addEventListener("click", funct
 
     chrome.storage.local.get(["token"], (result) => {
         const token = result["token"];
-        chrome.runtime.sendMessage({type: "connectAPI", url: BACKEND_URL + UPDATE_LANGUAGE_PREFERENCE_ENDPOINT, body: {language_preference: languagePreference}, token:token}, (res) => {
+        chrome.runtime.sendMessage({type: "connectAPI", method:"PUT", url: BACKEND_URL + UPDATE_LANGUAGE_PREFERENCE_ENDPOINT, body: {language_preference: languagePreference}, token:token}, (res) => {
             if(res.status === 200){
                 showMessage(res.body.message);
             }else{
